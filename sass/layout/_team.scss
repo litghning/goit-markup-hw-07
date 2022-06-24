@@ -1,0 +1,74 @@
+.team {
+    background: var(--grey-color);
+    --card-item: 4;
+}
+
+.team-container {
+    padding: 30px;
+}
+
+.team-list {
+    display: flex;
+}
+
+.team-title {
+    font-weight: 500;
+    color: var(--black-color);
+    margin-bottom: 10px;
+}
+
+.team-item {
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-text,
+.team-title {
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+.team-text {
+    margin-bottom: 16px;
+}
+
+.team-soc-list {
+    display: flex;
+    justify-content: center;
+}
+
+.team-soc-item {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+
+}
+
+.team-soc-item:last-child {
+    margin-right: 0;
+}
+
+.team-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: fill var(--cubic-bezier), background-color var(--cubic-bezier);
+}
+
+.team-soc-icon {
+    fill: currentColor;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+
+}
