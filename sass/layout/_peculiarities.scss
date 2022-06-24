@@ -1,8 +1,12 @@
 .peculiarities {
     --card-item: 4;
+    &__title {
+        margin-bottom: 10px;
+        color: var(--black-color);
+    }
 }
 
-.peculiarities-item::before {
+.peculiarities__item::before {
     content: "";
     display: block;
     height: 120px;
@@ -31,7 +35,3 @@
 }
 
 
-.peculiarities-title {
-    margin-bottom: 10px;
-    color: var(--black-color);
-}

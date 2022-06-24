@@ -14,10 +14,11 @@
 
     color: var(--black-color)
 }
-&__contacs-list {
+}
+.header__contacs-list {
     display: flex;
     margin-left: auto;
-}
+    align-items: center;
 }
 
 .header__list .header__link.current {
@@ -36,7 +37,7 @@
 }
 
 .header__logo,
-.logo-footer {
+.footer__logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -68,12 +69,14 @@
     display: flex;
     align-items: center;
     position: relative;
-    transition: color var(--cubic-bezier);}
-    &__link:hover,
-    &__link:focus {
+    transition: color var(--cubic-bezier);
+
+    &:hover,
+    &:focus {
         color: var(--blue-color);
         transition: var(--cubic-bezier);
     }
+  }
 
 
 
@@ -81,7 +84,7 @@
 
 
 
-.contacs-icon {
+.contacs__icon {
     margin-right: 10px;
     fill: currentColor;
 }

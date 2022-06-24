@@ -7,11 +7,9 @@
     transition: opacity var(--cubic-bezier),
         visibility var(--cubic-bezier);
 }
-
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0);
 }
-
 .modal {
     width: 528px;
     min-height: 581px;
@@ -26,9 +24,43 @@
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--cubic-bezier);
+&__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+    color: var(--black-color);
 }
 
-.modal-btn {
+&__field {
+    margin-bottom: 10px;
+}
+&__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill var(--cubic-bezier);
+
+}
+&__text {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+&__label {
+    display: block;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+    color: var(--dark-color);
+    transform-origin: border var(--cubic-bezier);
+}
+}
+.modal__btn {
     width: 30px;
     height: 30px;
     border: 1px solid #999999;
@@ -42,52 +74,25 @@
     justify-content: center;
     padding: 0;
     transition: fill var(--cubic-bezier);
+    &__btn:hover,
+    &__btn:focus {
+        fill: var(--blue-color);
+    }
 }
-
-.modal-btn:hover,
-.modal-btn:focus {
-    fill: var(--blue-color);
-}
-
 .is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
-
-.modal-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 12px;
-    color: var(--black-color);
-}
-
-.modal-field {
-    margin-bottom: 10px;
-}
-
 .wrap {
     position: relative;
 }
-
-.modal-icon {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: fill var(--cubic-bezier);
-
-}
-
-.modal-input:hover+.modal-icon,
-.modal-input:focus+.modal-icon {
+.modal__input:hover+.modal__icon,
+.modal__input:focus+.modal__icon {
     fill: var(--blue-color);
 }
 
-.modal-input {
+.modal__input {
 
     width: 100%;
     height: 40px;
@@ -98,14 +103,12 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border var(--cubic-bezier);
-}
-
-.modal-input:hover,
-.modal-input:focus {
+    &__input:hover,
+    &__input:focus {
     border: 1px solid var(--blue-color);
 }
-
-.modal-area-text {
+}
+.modal__area-text {
 
     width: 100%;
     height: 120px;
@@ -118,32 +121,14 @@
     line-height: 14px;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
-
     resize: none;
+    &:hover,
+    &:focus {
+        border: 1px solid var(--blue-color);
+    }
 }
 
-.modal-text {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.modal-label {
-    display: block;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    margin-bottom: 4px;
-    color: var(--dark-color);
-    transform-origin: border var(--cubic-bezier);
-}
-
-.modal-area-text:hover,
-.odal-area-text:focus {
-    border: 1px solid var(--blue-color);
-}
-
-.checkbox-field {
+.checkbox__field {
     position: relative;
     display: flex;
     align-items: center;
@@ -151,20 +136,20 @@
     margin-bottom: 30px;
 }
 
-.checkbox-input {
+.checkbox__input {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.checkbox-text {
+.checkbox__text {
     display: flex;
     font-size: 14px;
     line-height: 1;
     letter-spacing: 0.03em;
 }
 
-.checkbox-span {
+.checkbox__span {
     width: 16px;
     height: 15px;
     position: relative;
@@ -178,7 +163,7 @@
     transition: backgraund-color var(--cubic-bezier), border var(--cubic-bezier);
 }
 
-.check-icon {
+.check__icon {
     width: 100%;
     height: 100%;
     fill: transparent;
@@ -189,21 +174,21 @@
     transition: fill var(--cubic-bezier);
 }
 
-.checkbox-input:focus+.checkbox-text span,
-.checkbox-input:hover+.checkbox-text span {
+.checkbox__input:focus+.checkbox__text span,
+.checkbox__input:hover+.checkbox__text span {
     border-color: var(--blue-color);
 }
 
-.checkbox-input:checked+.checkbox-text span {
+.checkbox__input:checked+.checkbox__text span {
     background-color: var(--blue-color);
     border: 2px solid var(--blue-color);
 }
 
-.checkbox-input:checked+.checkbox-text .check-icon {
+.checkbox__input:checked+.checkbox__text .check__icon {
     fill: var(--white-color);
 }
 
-.checkbox-link {
+.checkbox__link {
     display: inline;
     margin-left: 1px;
     color: var(--blue-color);

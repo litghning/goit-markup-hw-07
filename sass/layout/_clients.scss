@@ -1,16 +1,18 @@
-.clients-list {
+.clients__list {
     --card-item: 6;
 }
 
-.clients-item:last-child {
+.clients__item:last-child {
     margin-right: 0;
 }
 
-.clients-item {
+.clients__item {
     color: var(--soc-grey-color);
 }
-
-.clients-link {
+.clients__soc-icon {
+    fill: currentColor;
+}
+.clients__link {
     color: inherit;
     display: flex;
     fill: var(--soc-grey-color);
@@ -23,14 +25,14 @@
     border-radius: 4px;
     transition: fill var(--cubic-bezier),
         border var(--cubic-bezier);
-}
 
-.clients-soc-icon {
-    fill: currentColor;
+    &:focus,
+    &:hover {
+        color: var(--blue-color);
+        border: 1px solid var(--blue-color);
+    }
 }
+ 
 
-.clients-link:focus,
-.clients-link:hover {
-    color: var(--blue-color);
-    border: 1px solid var(--blue-color);
-}
+
+
