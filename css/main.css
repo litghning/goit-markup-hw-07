@@ -32,6 +32,16 @@ img {
   height: auto;
 }
 
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--blue-color);
+  text-decoration: none;
+}
+
 .accent {
   color: var(--logo-color);
 }
@@ -74,7 +84,7 @@ img {
   list-style: none;
 }
 
-.text {
+.item-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -101,6 +111,42 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-color);
+}
+.button__btn:hover, .button__btn:focus {
+  background-color: var(--dark-blue-color);
+}
+
+.soc__list {
+  display: flex;
+  justify-content: center;
+}
+
+.soc__item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.soc__item:last-child {
+  margin-right: 0;
+}
+
+.soc__link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: fill var(--cubic-bezier), background-color var(--cubic-bezier);
+}
+.soc__link:hover, .soc__link:focus {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+.soc__icon {
+  fill: currentColor;
 }
 
 .header {
@@ -138,16 +184,6 @@ img {
   border-radius: 2px;
   left: 0;
   bottom: 0;
-}
-
-.header__logo,
-.footer__logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--blue-color);
 }
 
 .header__item:not(:last-child) {
@@ -308,39 +344,6 @@ img {
   line-height: 1.19;
 }
 
-.team__soc-list {
-  display: flex;
-  justify-content: center;
-}
-
-.team__soc-item {
-  width: 44px;
-  height: 44px;
-  margin-right: 10px;
-}
-
-.team__soc-item:last-child {
-  margin-right: 0;
-}
-
-.team__soc-link {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: fill var(--cubic-bezier), background-color var(--cubic-bezier);
-}
-.team__soc-link:hover, .team__soc-link:focus {
-  background-color: var(--blue-color);
-  color: var(--white-color);
-}
-
-.team__soc-icon {
-  fill: currentColor;
-}
-
 .clients__list {
   --card-item: 6;
 }
@@ -350,17 +353,17 @@ img {
 }
 
 .clients__item {
-  color: var(--soc-grey-color);
+  color: var(--soc__grey-color);
 }
 
-.clients__soc-icon {
+.clients__soc__icon {
   fill: currentColor;
 }
 
 .clients__link {
   color: inherit;
   display: flex;
-  fill: var(--soc-grey-color);
+  fill: var(--soc__grey-color);
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
@@ -451,13 +454,13 @@ address {
   display: block;
 }
 
-.footer .team__soc-link {
+.footer .soc__link {
   color: var(--white-color);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transition: background-color var(--cubic-bezier);
 }
-.footer .team__soc-link:hover, .footer .team__soc-link:focus {
+.footer .soc__link:hover, .footer .soc__link:focus {
   background-color: var(--blue-color);
 }
 
@@ -769,7 +772,7 @@ address {
   --card-gap-top: 30px;
   --card-gap-left: 30px;
   --card-item: 3;
-  --soc-grey-color: #AFB1B8;
+  --soc__grey-color: #AFB1B8;
   --cubic-bezier: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --dark-blue-color: #188CE8;
 }/*# sourceMappingURL=main.css.map */

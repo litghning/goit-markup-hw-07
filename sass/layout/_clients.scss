@@ -7,15 +7,15 @@
 }
 
 .clients__item {
-    color: var(--soc-grey-color);
+    color: var(--soc__grey-color);
 }
-.clients__soc-icon {
+.clients__soc__icon {
     fill: currentColor;
 }
 .clients__link {
     color: inherit;
     display: flex;
-    fill: var(--soc-grey-color);
+    fill: var(--soc__grey-color);
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
