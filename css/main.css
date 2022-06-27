@@ -7,6 +7,15 @@
   color: var(--dark-color);
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+}
+
 h1,
 h2,
 h3,
@@ -42,11 +51,11 @@ img {
   text-decoration: none;
 }
 
-.accent {
+.logo__header-accent {
   color: var(--logo-color);
 }
 
-.footer__accent {
+.logo__footer-accent {
   color: var(--white-color);
 }
 
@@ -73,15 +82,6 @@ img {
   margin: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.list {
-  list-style: none;
 }
 
 .item-title {
